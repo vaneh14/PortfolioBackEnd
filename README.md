@@ -1,4 +1,20 @@
-# PortfolioBackEnd
-Portfolio para Back End
+# Portfolio Web 
 
-Proyecto Integrador Portfolio Web Full Stack para Argentina Programa #YoProgramo
+Bienvenido al Repositorio Back End del mi Portfolio Web. El Repositorio Front End se encuentra [aquí](https://github.com/vaneh14/PortfolioFrontEnd).
+
+Este Repositorio aloja el desarrollo de la capa Back End del Proyecto Integrador de la segunda etapa de **Argentina Programa, #Yo Programo**. Consiste en el diseño y creación de API Rest utilizando el lenguaje [Java](https://www.java.com/es/) y el framework [Spring Boot](https://spring.io/) 3.0.5 bajo el patrón MVC, conectado a una base de datos relacional [MySQL](https://www.mysql.com/) 8.0.32.
+
+
+## Instalación
+
+Para ver una vista previa de manera local deberás:
+
+1. Clonar el repositorio: `https://github.com/vaneh14/PortfolioBackEnd.git`
+2. Instalar las dependencias necesarias mediante `build`
+3. Configurar el archivo `src/main/resources/application.properties_`
+4. Ejecutar la aplicación mediante el comando `run file` del archivo `BackEndApplication.java`
+
+
+## Sobre mí
+
+Hola, soy **Vanesa!** Me encuentro realizando mis primeros pasos en el mundo del desarrollo web. 
