@@ -7,6 +7,7 @@ package com.portfolio.BackEnd.service;
 import com.portfolio.BackEnd.model.Habilidad;
 import com.portfolio.BackEnd.repository.HabilidadRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,6 +49,26 @@ public class HabilidadService implements IHabilidadService {
     @Override
     public void borrarHabilidad(long id) {
         skillRepo.deleteById(id);
+    }
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public Optional<Habilidad> verHabilidadId(long id) {
+        return skillRepo.findById(id);
+    }
+
+    /**
+     *
+     * @param skill
+     * @return
+     */
+    @Override
+    public Habilidad editarHabilidad(Habilidad skill) {
+        return skillRepo.save(skill);
     }
 
 }

@@ -8,7 +8,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import java.util.Date;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,9 +26,10 @@ public class ExperienciaLaboral {
     @GeneratedValue(strategy = GenerationType.AUTO)
     
     private long id;
+    private String nombre_puesto;
     private String nombre_empresa;
-    private Date fechaInicio;
-    private Date fechaFin;
+    private String fecha_inicio;
+    private String fecha_fin;
     private String descripcion;
     private int persona_id;
     
@@ -42,18 +42,21 @@ public class ExperienciaLaboral {
     /**
      *
      * @param id
+     * @param nombre_puesto
      * @param nombre_empresa
-     * @param fechaInicio
-     * @param fechaFin
+     * @param fecha_inicio
+     * @param fecha_fin
      * @param descripcion
      * @param persona_id
      */
-    public ExperienciaLaboral(long id, String nombre_empresa, Date fechaInicio, Date fechaFin, String descripcion, int persona_id){
+    public ExperienciaLaboral(long id, String nombre_puesto, String nombre_empresa, String fecha_inicio, String fecha_fin, String descripcion, int persona_id){
         this.id = id;
+        this.nombre_puesto = nombre_puesto;
         this.nombre_empresa = nombre_empresa;
-        this.fechaInicio = fechaInicio;
-        this.fechaFin = fechaFin;
+        this.fecha_inicio = fecha_inicio;
+        this.fecha_fin = fecha_fin;
         this.descripcion = descripcion;
         this.persona_id = persona_id;
     }
+    
 }

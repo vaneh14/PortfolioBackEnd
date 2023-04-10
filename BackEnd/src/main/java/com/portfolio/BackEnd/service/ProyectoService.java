@@ -7,6 +7,7 @@ package com.portfolio.BackEnd.service;
 import com.portfolio.BackEnd.model.Proyecto;
 import com.portfolio.BackEnd.repository.ProyectoRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,6 +49,26 @@ public class ProyectoService implements IProyectoService{
     @Override
     public void borrarProyecto(long id) {
         proyRepo.deleteById(id);
+    }
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public Optional<Proyecto> verProyectoId(long id) {
+        return proyRepo.findById(id);
+    }
+
+    /**
+     *
+     * @param proy
+     * @return
+     */
+    @Override
+    public Proyecto editarProyecto(Proyecto proy) {
+        return proyRepo.save(proy);
     }
     
 }

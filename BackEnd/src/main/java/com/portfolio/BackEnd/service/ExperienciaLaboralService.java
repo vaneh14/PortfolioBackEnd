@@ -7,6 +7,7 @@ package com.portfolio.BackEnd.service;
 import com.portfolio.BackEnd.model.ExperienciaLaboral;
 import com.portfolio.BackEnd.repository.ExperienciaLaboralRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,11 +18,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 
-public class ExperienciaLaboralService implements IExperienciaLaboralService{
+public class ExperienciaLaboralService implements IExperienciaLaboralService {
     
     @Autowired
     
-    public ExperienciaLaboralRepository workRepo;    
+    public ExperienciaLaboralRepository workRepo;
 
     /**
      *
@@ -50,4 +51,24 @@ public class ExperienciaLaboralService implements IExperienciaLaboralService{
         workRepo.deleteById(id);
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public Optional<ExperienciaLaboral> verTrabajoId(long id) {
+        return workRepo.findById(id);
+    }
+
+    /**
+     *
+     * @param work
+     * @return
+     */
+    @Override
+    public ExperienciaLaboral editarTrabajo(ExperienciaLaboral work) {
+        return workRepo.save(work);
+    }
+    
 }

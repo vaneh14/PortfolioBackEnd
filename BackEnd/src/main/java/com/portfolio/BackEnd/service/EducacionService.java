@@ -7,6 +7,7 @@ package com.portfolio.BackEnd.service;
 import com.portfolio.BackEnd.model.Educacion;
 import com.portfolio.BackEnd.repository.EducacionRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -49,5 +50,25 @@ public class EducacionService implements IEducacionService{
     public void borrarCurso(long id) {
         cursoRepo.deleteById(id);
     }    
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public Optional<Educacion> verCursoId(long id) {
+        return cursoRepo.findById(id);
+    }
+
+    /**
+     *
+     * @param curs
+     * @return
+     */
+    @Override
+    public Educacion editarCurso(Educacion curs) {
+        return cursoRepo.save(curs);
+    }
     
 }

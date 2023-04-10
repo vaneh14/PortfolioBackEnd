@@ -6,6 +6,7 @@ package com.portfolio.BackEnd.service;
 
 import com.portfolio.BackEnd.model.ExperienciaLaboral;
 import java.util.List;
+import java.util.Optional;
 
 /**
  *
@@ -13,10 +14,6 @@ import java.util.List;
  */
 public interface IExperienciaLaboralService {
     
-    /**
-     *
-     * @return
-     */
     public List<ExperienciaLaboral> verTrabajos();
     
     /**
@@ -24,6 +21,20 @@ public interface IExperienciaLaboralService {
      * @param work
      */
     public void crearTrabajo(ExperienciaLaboral work);
+    
+    /**
+     *
+     * @param id
+     * @return
+     */
+    public Optional<ExperienciaLaboral> verTrabajoId(long id);
+    
+    /**
+     *
+     * @param work
+     * @return
+     */
+    public ExperienciaLaboral editarTrabajo(ExperienciaLaboral work);
     
     /**
      *

@@ -6,6 +6,7 @@ package com.portfolio.BackEnd.service;
 
 import com.portfolio.BackEnd.model.Habilidad;
 import java.util.List;
+import java.util.Optional;
 
 /**
  *
@@ -24,6 +25,20 @@ public interface IHabilidadService {
      * @param skill
      */
     public void crearHabilidad(Habilidad skill);
+    
+    /**
+     *
+     * @param id
+     * @return
+     */
+    public Optional<Habilidad> verHabilidadId(long id);
+    
+    /**
+     *
+     * @param skill
+     * @return
+     */
+    public Habilidad editarHabilidad(Habilidad skill);
     
     /**
      *

@@ -6,6 +6,7 @@ package com.portfolio.BackEnd.service;
 
 import com.portfolio.BackEnd.model.Educacion;
 import java.util.List;
+import java.util.Optional;
 
 /**
  *
@@ -24,6 +25,20 @@ public interface IEducacionService {
      * @param curs
      */
     public void crearCurso(Educacion curs);
+    
+    /**
+     *
+     * @param id
+     * @return 
+     */
+    public Optional<Educacion> verCursoId(long id);
+    
+    /**
+     *
+     * @param curs
+     * @return 
+     */
+    public Educacion editarCurso(Educacion curs);
     
     /**
      *

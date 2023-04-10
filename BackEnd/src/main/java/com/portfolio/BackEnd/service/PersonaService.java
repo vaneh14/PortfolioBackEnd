@@ -7,6 +7,7 @@ package com.portfolio.BackEnd.service;
 import com.portfolio.BackEnd.model.Persona;
 import com.portfolio.BackEnd.repository.PersonaRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,6 +49,26 @@ public class PersonaService implements IPersonaService{
     @Override
     public void borrarPersona(long id) {
         persoRepo.deleteById(id);
+    }
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public Optional<Persona> verPersonaId(long id) {
+        return persoRepo.findById(id);
+    }
+
+    /**
+     *
+     * @param pers
+     * @return
+     */
+    @Override
+    public Persona editarPersona(Persona pers) {
+        return persoRepo.save(pers);
     }
 
 }

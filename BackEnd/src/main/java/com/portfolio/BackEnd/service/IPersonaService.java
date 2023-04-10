@@ -6,6 +6,7 @@ package com.portfolio.BackEnd.service;
 
 import com.portfolio.BackEnd.model.Persona;
 import java.util.List;
+import java.util.Optional;
 
 /**
  *
@@ -24,6 +25,20 @@ public interface IPersonaService {
      * @param pers
      */
     public void crearPersona(Persona pers);
+    
+    /**
+     *
+     * @param id
+     * @return
+     */
+    public Optional<Persona> verPersonaId(long id);
+    
+    /**
+     *
+     * @param pers
+     * @return
+     */
+    public Persona editarPersona(Persona pers);
     
     /**
      *
