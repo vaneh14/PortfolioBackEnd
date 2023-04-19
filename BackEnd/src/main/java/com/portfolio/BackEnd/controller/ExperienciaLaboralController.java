@@ -61,7 +61,7 @@ public class ExperienciaLaboralController {
      */
     /* EDITAR TRABAJO */
     @GetMapping("/edit/{id}")
-    public Optional<ExperienciaLaboral> verTrabajoId(long id){
+    public Optional<ExperienciaLaboral> verTrabajoId(@PathVariable long id){
         return workServ.verTrabajoId(id);
     }
     

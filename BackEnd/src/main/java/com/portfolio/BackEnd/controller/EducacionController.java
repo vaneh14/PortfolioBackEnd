@@ -61,7 +61,7 @@ public class EducacionController {
      */
     /* EDITAR CURSO */
     @GetMapping("/edit/{id}")
-    public Optional<Educacion> verCursoId(long id){
+    public Optional<Educacion> verCursoId(@PathVariable long id){
         return cursoServ.verCursoId(id);
     }
     

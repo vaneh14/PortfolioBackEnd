@@ -61,7 +61,7 @@ public class ProyectoController {
      */
     /* EDITAR PROYECTO */ 
     @GetMapping("/edit/{id}")
-    public Optional<Proyecto> verProyectoId(long id){
+    public Optional<Proyecto> verProyectoId(@PathVariable long id){
         return proyServ.verProyectoId(id);
     }
     

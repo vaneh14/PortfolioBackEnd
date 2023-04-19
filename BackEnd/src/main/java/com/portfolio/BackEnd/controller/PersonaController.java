@@ -61,7 +61,7 @@ public class PersonaController {
      */
     /* EDITAR PERSONA */
     @GetMapping("/edit/{id}")
-    public Optional<Persona> verPersonaId(long id){
+    public Optional<Persona> verPersonaId(@PathVariable long id){
         return persoServ.verPersonaId(id);
     }
     

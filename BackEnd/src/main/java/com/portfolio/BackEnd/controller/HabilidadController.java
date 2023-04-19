@@ -38,7 +38,7 @@ public class HabilidadController {
      *
      * @return
      */
-    /* MOSTRAR HABILIDAD */
+    /* MOSTRAR HABILIDADES */
     @GetMapping
     public List<Habilidad> verHabilidades(){
         return skillServ.verHabilidades();
@@ -61,7 +61,7 @@ public class HabilidadController {
      */
     /* EDITAR HABILIDAD */
     @GetMapping("/edit/{id}")
-    public Optional<Habilidad> verHabilidadId(long id){
+    public Optional<Habilidad> verHabilidadId(@PathVariable long id){
         return skillServ.verHabilidadId(id);
     }
     
