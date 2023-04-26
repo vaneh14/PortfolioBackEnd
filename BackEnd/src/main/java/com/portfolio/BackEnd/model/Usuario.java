@@ -8,8 +8,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import java.util.Collection;
+import java.util.Collections;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 /**
  *
@@ -20,7 +24,7 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class Usuario {
+public class Usuario implements UserDetails {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,7 +32,6 @@ public class Usuario {
     private long id;
     private String email;
     private String password;
-    private int persona_id;
     
     public Usuario(){        
     }
@@ -38,13 +41,46 @@ public class Usuario {
      * @param id
      * @param email
      * @param password
-     * @param persona_id
      */
-    public Usuario(long id, String email, String password, int persona_id){
+    public Usuario(long id, String email, String password){
         this.id = id;
         this.email = email;
         this.password = password;
-        this.persona_id = persona_id;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Collections.emptyList();
+    }
+
+    @Override
+    public String getUsername() {
+        return email;
     }
     
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+        
 }
