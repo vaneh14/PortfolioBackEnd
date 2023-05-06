@@ -9,7 +9,6 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import java.awt.RenderingHints.Key;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -27,9 +26,9 @@ import org.springframework.stereotype.Service;
 
 public class JwtService {
     
-    //private static final String SECRET_KEY = "26452948404D635166546A576E5A7234753778214125442A472D4A614E645267";
-    
-    private static final SecretKey key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+    private static final String SECRET_KEY = "26452948404D635166546A576E5A7234753778214125442A472D4A614E645267";
+        
+    private static final SecretKey key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(SECRET_KEY));
     
     /**
      *
@@ -105,10 +104,5 @@ public class JwtService {
                 .parseClaimsJws(token)
                 .getBody();
     }
-
-    //private Key getSignInKey() {
-    //    byte[] keyBytes = Decoders.BASE64.decode(SECRET_KEY);
-    //    return (Key) Keys.hmacShaKeyFor(keyBytes);
-    //}
   
 }
