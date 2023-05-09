@@ -27,7 +27,6 @@ public class Proyecto {
     
     private long id;
     private String nombre_proyecto;
-    private String fecha_creacion;
     private String descripcion;
     private String url_imagen;
     private String url_repositorio;
@@ -41,17 +40,15 @@ public class Proyecto {
      *
      * @param id
      * @param nombre_proyecto
-     * @param fecha_creacion
      * @param descripcion
      * @param url_imagen
      * @param url_repositorio
      * @param url_proyecto
      * @param persona_id
      */
-    public Proyecto(long id, String nombre_proyecto, String fecha_creacion, String descripcion, String url_imagen, String url_repositorio, String url_proyecto, int persona_id){
+    public Proyecto(long id, String nombre_proyecto, String descripcion, String url_imagen, String url_repositorio, String url_proyecto, int persona_id){
         this.id = id;
         this.nombre_proyecto = nombre_proyecto;
-        this.fecha_creacion = fecha_creacion;
         this.descripcion = descripcion;
         this.url_imagen = url_imagen;
         this.url_repositorio = url_repositorio;
