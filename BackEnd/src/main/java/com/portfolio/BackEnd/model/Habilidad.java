@@ -28,6 +28,8 @@ public class Habilidad {
     private long id;
     private String nombre_habilidad;
     private String porcentaje;
+    private String url_logo;
+    private String tipo;
     private int persona_id;
     
     
@@ -42,12 +44,17 @@ public class Habilidad {
      * @param id
      * @param nombre_habilidad
      * @param porcentaje
+     * @param url_logo
+     * @param tipo
      * @param persona_id
      */
-    public Habilidad(long id, String nombre_habilidad, String porcentaje, int persona_id){
+    public Habilidad(long id, String nombre_habilidad, String porcentaje, String url_logo, 
+                     String tipo, int persona_id){
         this.id = id;
         this.nombre_habilidad = nombre_habilidad;
         this.porcentaje = porcentaje;
+        this.url_logo = url_logo;
+        this.tipo = tipo;
         this.persona_id = persona_id;
     }
     

@@ -5,6 +5,11 @@ Bienvenido al Repositorio Back End de mi Portfolio Web. El Repositorio Front End
 Este Repositorio aloja el desarrollo de la capa Back End del Proyecto Integrador de la segunda etapa de **Argentina Programa, #Yo Programo**. Consiste en el diseño y creación de API Rest utilizando el lenguaje [Java](https://www.java.com/es/) y [Spring Boot](https://spring.io/) 3.0.5 bajo el patrón MVC, conectado a una base de datos relacional [MySQL](https://www.mysql.com/) 8.0.32.
 
 
+## Diagrama Entidad Relación
+
+<img width="800" src="./src/assets/img/DER_portfolio.jpg" alt="Imagen DER Base de Datos">
+
+
 ## Autorización y Autenticación
 
 Este proyecto implementa seguridad con [Spring Security](https://docs.spring.io/spring-security/reference/index.html) y [JSON Web Token](https://jwt.io/) 0.11.5. A partir de la autenticacion mediante el _usuario_ y _contraseña_ del administrador se genera un token de acceso (JWT) que autorizará el acceso a los recursos protegidos de la API.
