@@ -7,7 +7,9 @@ Este Repositorio aloja el desarrollo de la capa Back End del Proyecto Integrador
 
 ## Diagrama Entidad Relación
 
-<img width="800" src="./src/assets/img/DER_portfolio.jpg" alt="Imagen DER Base de Datos">
+<p align="center">
+    <img width="700" src="DER.jpg" alt="Imagen DER">
+</p>
 
 
 ## Autorización y Autenticación
